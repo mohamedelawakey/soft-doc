@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-23 — Publish releases from main pushes
+
+- Changed the release workflow to publish from each push to `main`, including direct pushes and merged pull requests, with tags based on workflow run numbers.
+- Updated the README to explain the trigger and tag format.
+
+---
+
 ## 2026-11-23 — Align automatic release tags with the first release
 
 - Started merge-based release tags at `v1.0.<PR number>` after the earlier Release Please PR recorded version `1.0.0`.
