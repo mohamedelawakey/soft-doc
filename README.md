@@ -38,6 +38,8 @@ These skills let a project owner make decisions in conversation while the agent 
 
 The owner supplies decisions in conversation; the agent updates the files. The `skills/` directory contains the source packages. This repository also exposes them through `.agents/skills/` for agents that support that project-level convention. If your agent does not discover them automatically, point it to the relevant `SKILL.md` file.
 
+Before granting an agent access to a project, read the [security policy](SECURITY.md) for guidance on permissions, untrusted content, and handling secrets.
+
 The skills maintain [CHANGELOG.md](CHANGELOG.md) as a short history of persisted changes. One entry can cover several files changed for the same purpose; it should say what actually happened and include useful IDs. [decisions.md](docs/decisions.md) holds the reason and impact behind consequential product decisions. Runtime events belong in the project's logging system, not in this Markdown history.
 
 For a consequential change, `feature-change` first shows the current rule, requested rule, affected IDs and files, and regression checks. It then updates the owning documents and records the confirmed choice in [decisions.md](docs/decisions.md). A clear request to make the change is enough to proceed; the impact preview is not an extra approval gate.

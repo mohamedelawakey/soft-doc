@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-23 — Document safe skill use
+
+- Added a security policy explaining agent permissions, secret handling, untrusted instructions, and private vulnerability reporting; linked it from the README.
+
+---
+
 ## 2026-11-23 — Ignore local working files
 
 - Added a focused `.gitignore` for review drafts, caches, local environments, secrets, and editor files while keeping skills, docs, and benchmark evidence publishable.
