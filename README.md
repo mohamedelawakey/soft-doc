@@ -40,6 +40,12 @@ The owner supplies decisions in conversation; the agent updates the files. The `
 
 Before granting an agent access to a project, read the [security policy](SECURITY.md) for guidance on permissions, untrusted content, and handling secrets.
 
+### Releases
+
+GitHub Actions runs Release Please on pushes to `main` and can also be started manually from the Actions tab. It reads Conventional Commit messages such as `feat: add a skill` and `fix: correct an audit check`, then opens a release pull request. Review and merge that pull request when you want to publish a version; Release Please then creates the version tag and GitHub Release. The release workflow leaves this repository's manually maintained `CHANGELOG.md` alone.
+
+For the workflow to open pull requests, enable **Allow GitHub Actions to create and approve pull requests** under **Settings → Actions → General** if it is disabled. The workflow uses GitHub's built-in `GITHUB_TOKEN`; it does not require a personal access token. Keep adding a brief `CHANGELOG.md` entry for each persisted project change as described in [AGENTS.md](AGENTS.md).
+
 The skills maintain [CHANGELOG.md](CHANGELOG.md) as a short history of persisted changes. One entry can cover several files changed for the same purpose; it should say what actually happened and include useful IDs. [decisions.md](docs/decisions.md) holds the reason and impact behind consequential product decisions. Runtime events belong in the project's logging system, not in this Markdown history.
 
 For a consequential change, `feature-change` first shows the current rule, requested rule, affected IDs and files, and regression checks. It then updates the owning documents and records the confirmed choice in [decisions.md](docs/decisions.md). A clear request to make the change is enough to proceed; the impact preview is not an extra approval gate.
