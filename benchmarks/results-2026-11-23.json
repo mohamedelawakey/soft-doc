@@ -1,0 +1,187 @@
+{
+  "revisions": {
+    "click": "08b803cf32ceb2ae6a772c62d5da42757a897d44",
+    "requests": "3c7baaa05ab4aa49cc819ce3a819d260de19c157",
+    "flask": "49943b5a94413a530761350f04e896f76e8d620e"
+  },
+  "cases": [
+    {
+      "project": "click",
+      "scenario": "unchanged",
+      "expected_claim": false,
+      "predicted_claim": false,
+      "expected_document": false,
+      "predicted_document": false,
+      "observed_reason": null
+    },
+    {
+      "project": "click",
+      "scenario": "behavior_change",
+      "expected_claim": true,
+      "predicted_claim": true,
+      "expected_document": true,
+      "predicted_document": true,
+      "observed_reason": "changed"
+    },
+    {
+      "project": "click",
+      "scenario": "unrelated_edit",
+      "expected_claim": false,
+      "predicted_claim": false,
+      "expected_document": false,
+      "predicted_document": false,
+      "observed_reason": null
+    },
+    {
+      "project": "click",
+      "scenario": "missing_document_id",
+      "expected_claim": true,
+      "predicted_claim": true,
+      "expected_document": true,
+      "predicted_document": true,
+      "observed_reason": "changed"
+    },
+    {
+      "project": "click",
+      "scenario": "paraphrased_document",
+      "expected_claim": true,
+      "predicted_claim": true,
+      "expected_document": true,
+      "predicted_document": false,
+      "observed_reason": "changed"
+    },
+    {
+      "project": "click",
+      "scenario": "line_shift",
+      "expected_claim": false,
+      "predicted_claim": false,
+      "expected_document": false,
+      "predicted_document": false,
+      "observed_reason": null
+    },
+    {
+      "project": "requests",
+      "scenario": "unchanged",
+      "expected_claim": false,
+      "predicted_claim": false,
+      "expected_document": false,
+      "predicted_document": false,
+      "observed_reason": null
+    },
+    {
+      "project": "requests",
+      "scenario": "behavior_change",
+      "expected_claim": true,
+      "predicted_claim": true,
+      "expected_document": true,
+      "predicted_document": true,
+      "observed_reason": "changed"
+    },
+    {
+      "project": "requests",
+      "scenario": "unrelated_edit",
+      "expected_claim": false,
+      "predicted_claim": false,
+      "expected_document": false,
+      "predicted_document": false,
+      "observed_reason": null
+    },
+    {
+      "project": "requests",
+      "scenario": "missing_document_id",
+      "expected_claim": true,
+      "predicted_claim": true,
+      "expected_document": true,
+      "predicted_document": true,
+      "observed_reason": "changed"
+    },
+    {
+      "project": "requests",
+      "scenario": "paraphrased_document",
+      "expected_claim": true,
+      "predicted_claim": true,
+      "expected_document": true,
+      "predicted_document": false,
+      "observed_reason": "changed"
+    },
+    {
+      "project": "requests",
+      "scenario": "line_shift",
+      "expected_claim": false,
+      "predicted_claim": false,
+      "expected_document": false,
+      "predicted_document": false,
+      "observed_reason": null
+    },
+    {
+      "project": "flask",
+      "scenario": "unchanged",
+      "expected_claim": false,
+      "predicted_claim": false,
+      "expected_document": false,
+      "predicted_document": false,
+      "observed_reason": null
+    },
+    {
+      "project": "flask",
+      "scenario": "behavior_change",
+      "expected_claim": true,
+      "predicted_claim": true,
+      "expected_document": true,
+      "predicted_document": true,
+      "observed_reason": "changed"
+    },
+    {
+      "project": "flask",
+      "scenario": "unrelated_edit",
+      "expected_claim": false,
+      "predicted_claim": false,
+      "expected_document": false,
+      "predicted_document": false,
+      "observed_reason": null
+    },
+    {
+      "project": "flask",
+      "scenario": "missing_document_id",
+      "expected_claim": true,
+      "predicted_claim": true,
+      "expected_document": true,
+      "predicted_document": true,
+      "observed_reason": "changed"
+    },
+    {
+      "project": "flask",
+      "scenario": "paraphrased_document",
+      "expected_claim": true,
+      "predicted_claim": true,
+      "expected_document": true,
+      "predicted_document": false,
+      "observed_reason": "changed"
+    },
+    {
+      "project": "flask",
+      "scenario": "line_shift",
+      "expected_claim": false,
+      "predicted_claim": false,
+      "expected_document": false,
+      "predicted_document": false,
+      "observed_reason": null
+    }
+  ],
+  "claim_detection": {
+    "tp": 9,
+    "fp": 0,
+    "fn": 0,
+    "tn": 9,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "document_mapping": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 3,
+    "tn": 9,
+    "precision": 1.0,
+    "recall": 0.667
+  }
+}
