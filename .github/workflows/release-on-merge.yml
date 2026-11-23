@@ -24,7 +24,7 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           MERGE_SHA: ${{ github.event.pull_request.merge_commit_sha }}
         run: |
-          tag="v0.1.${PR_NUMBER}"
+          tag="v1.0.${PR_NUMBER}"
           gh release create "$tag" \
             --target "$MERGE_SHA" \
             --title "$tag" \
