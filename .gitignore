@@ -1,0 +1,31 @@
+# Local documentation review drafts
+.docs-review/
+
+# Python caches and test output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local environments and dependencies
+.venv/
+venv/
+node_modules/
+
+# Local secrets and machine-specific settings
+.env
+.env.*
+!.env.example
+!.env.sample
+.vscode/
+.idea/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Keep .agents/skills/, docs/, and benchmarks/ versioned.
