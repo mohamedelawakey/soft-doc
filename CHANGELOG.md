@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-23 — Publish releases on merge
+
+- Replaced Release Please with a workflow that publishes a tagged GitHub Release when a pull request is merged into `main`, without a release branch or release pull request.
+- Documented the automatic tag format and trigger in the README.
+
+---
+
 ## 2026-11-23 — Add reviewed release automation
 
 - Configured Release Please to prepare GitHub Release pull requests from Conventional Commits while preserving the manually maintained changelog.
