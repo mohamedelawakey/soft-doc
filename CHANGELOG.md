@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-23 — Align automatic release tags with the first release
+
+- Started merge-based release tags at `v1.0.<PR number>` after the earlier Release Please PR recorded version `1.0.0`.
+
+---
+
 ## 2026-11-23 — Publish releases on merge
 
 - Replaced Release Please with a workflow that publishes a tagged GitHub Release when a pull request is merged into `main`, without a release branch or release pull request.
