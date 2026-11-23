@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-23 — Add reviewed release automation
+
+- Configured Release Please to prepare GitHub Release pull requests from Conventional Commits while preserving the manually maintained changelog.
+- Documented the GitHub Actions setting needed to create release pull requests.
+
+---
+
 ## 2026-11-23 — Document safe skill use
 
 - Added a security policy explaining agent permissions, secret handling, untrusted instructions, and private vulnerability reporting; linked it from the README.
