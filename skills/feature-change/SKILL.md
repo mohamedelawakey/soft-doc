@@ -31,6 +31,6 @@ After completing a coherent change, prepend a concise entry to the target projec
 
 Check that the new or changed requirement is reflected in the needed API, data, UI, and plan entries without contradictory old rules. Identify existing requirements whose implementation may be affected by shared code and run or plan their relevant regression checks. If implementation is part of the user's request, follow `AGENTS.md`, `engineering.md`, and `testing.md` to complete it; a documentation-only request does not by itself require code changes.
 
-If `scripts/check_docs.py` is available in the skill package or project, run it against the project root. Treat its output as mechanical findings only; inspect semantic consistency yourself. Fix introduced errors and report pre-existing ones separately.
+If the installed `docs-audit/scripts/check_docs.py` is available, run it against the project root. Treat its output as mechanical findings only; inspect semantic consistency yourself. Fix introduced errors and report pre-existing ones separately.
 
 Report the decision, files and IDs changed, what was verified, and any unresolved impact. Do not claim tests passed unless they were run.
