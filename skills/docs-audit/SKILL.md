@@ -23,7 +23,7 @@ Start with `README.md`, `AGENTS.md`, `CHANGELOG.md`, `docs/product.md`, `docs/pr
 8. **Change history:** Check that material completed changes have concise, factual changelog entries and that entries do not describe proposed work as completed. Do not infer that an old project has complete historical coverage before the changelog was adopted.
 9. **Observed structure:** When a file map or understanding report exists, check that important paths still exist and that coverage labels do not claim inspection or validation without linked evidence. Treat these as dated snapshots rather than authoritative product rules.
 
-Use repository search and direct file reads to verify claims. Run `scripts/check_docs.py` against the project root when available, then inspect its findings. The script checks mechanical links and ID coverage; it cannot prove semantic consistency or that a test result is genuine. For semantic gaps, cite the exact files and IDs involved; do not report a missing item merely because a naming pattern differs. Do not invent test results or mark work complete during an audit.
+Use repository search and direct file reads to verify claims. Run `scripts/check_docs.py` from this skill folder against the project root when available, then inspect its findings. The script checks mechanical links and ID coverage; it cannot prove semantic consistency or that a test result is genuine. For semantic gaps, cite the exact files and IDs involved; do not report a missing item merely because a naming pattern differs. Do not invent test results or mark work complete during an audit.
 
 ## Result
 
