@@ -9,8 +9,8 @@ Turn a project owner's conversation into project-specific documentation without 
 
 ## Start
 
-1. Resolve the target relative to the coding agent's current workspace directory, never relative to the user's home directory. If the current workspace is the software project, write its documentation there. If the current workspace is this template repository, create a child folder inside it using the project name supplied by the owner (for example, `./booking-demo/`); if no usable name is known, ask for one before creating files. An explicit absolute path from the owner overrides this default. Keep the template repository's example documents unchanged.
-2. Before the first write, state the resolved target path. If the workspace directory cannot be determined, ask the owner which open folder to use instead of guessing or falling back to home. Resolve relative paths from the workspace directory and keep later files in that same target unless the owner changes it.
+1. Use the software project open in the coding agent as the target, or the project path explicitly provided by the owner. If the open workspace is this template repository, ask for the target project path before writing; do not create an example project folder by default. Never guess the user's home directory. Keep this repository's example documents unchanged.
+2. Before the first write, state the resolved target path. If the workspace directory or target cannot be determined, ask the owner which folder to use. Resolve owner-provided relative paths from the workspace directory and keep later files in that same target unless the owner changes it.
 3. Inspect existing project documents and code relevant to the current phase. For a missing document, use the matching file in [assets/](assets/) as a starting structure. Preserve confirmed facts and established terminology.
 4. Distinguish confirmed decisions, tentative ideas, and unknowns. Do not turn an example or a suggestion into a requirement unless the owner chooses it.
 
@@ -29,7 +29,8 @@ The phases guide dependencies, not a rigid interrogation. Skip irrelevant docume
 - Keep IDs stable and references consistent. Do not mark requirements Verified or Locked, or tasks Done, on the strength of an interview alone.
 - After each meaningful phase, summarize what was written and the decisions still needed. The owner can correct the summary conversationally; apply corrections to the files yourself.
 - After persisting a coherent documentation change, add a brief entry to the target project's `CHANGELOG.md` (use [the bundled template](assets/CHANGELOG.md) if missing). Put the newest entry first and separate entries with `---`. Record actual file changes, not conversation turns or unconfirmed plans.
+- If the target project needs model usage tracking, copy [MONITORING.md](assets/MONITORING.md) and [monitor_usage.py](assets/scripts/monitor_usage.py) into its root and `scripts/` directory. Add `/monitoring/` to its `.gitignore`. Agents may submit provider-reported usage events; missing data stays `Unknown`.
 - Before declaring the documentation ready for implementation, check for contradictions, missing must-have behavior, broken references, and plan tasks without requirements. State any remaining open decisions that block implementation.
-- Run `scripts/check_docs.py` against the target project when available. Resolve mechanical findings or report them as open; inspect semantic consistency separately.
+- Run the installed `docs-audit/scripts/check_docs.py` against the target project when available. Resolve mechanical findings or report them as open; inspect semantic consistency separately.
 
 For a feature added to an already documented project, use `feature-change` instead of restarting discovery. For a standalone consistency review, use `docs-audit`.
