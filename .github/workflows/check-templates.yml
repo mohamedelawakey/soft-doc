@@ -1,0 +1,16 @@
+name: Check templates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check portable skill assets
+        run: python3 scripts/sync_skill_assets.py --check
+      - name: Check documentation links and IDs
+        run: python3 skills/docs-audit/scripts/check_docs.py .
