@@ -1,5 +1,53 @@
 # Changelog
 
+## 2026-11-24 — Keep portable templates synchronized
+
+- Added a sync and check command for shared documentation templates, monitoring template, and recorder script, plus a GitHub check that catches drift on pushes and pull requests.
+- Clarified that project files are the output of a skill run, while the repository templates are maintained as sources.
+
+---
+
+## 2026-11-24 — Clarify what installed skills use
+
+- Updated the README install example to copy all eight self-contained skill folders, skipping existing names, and distinguished bundled resources from the target project's documents.
+- Clarified where the documentation checker lives after installation.
+
+---
+
+## 2026-11-24 — Reorganize setup and workflow guidance
+
+- Reorganized the README around safe installation, detailed conversation-driven skill descriptions, common workflows, document ownership, evidence checks, releases, and license terms.
+- Changed `project-discovery` to ask for a target path when run from this template repository instead of assuming an example child folder.
+
+---
+
+## 2026-11-23 — Record model usage by request
+
+- Added a provider-neutral event recorder with local JSONL history, dated rate snapshots, estimated token costs, duplicate protection, and a generated Markdown request report.
+- Updated agent and project-discovery guidance to use the recorder when provider usage data is available.
+
+---
+
+## 2026-11-23 — Add usage and cost monitoring template
+
+- Added a root `MONITORING.md` ledger for dated activity, measured usage, cost basis, evidence, and unknown coverage; included a project-discovery asset and linked the guidance from agent instructions and README.
+
+---
+
+## 2026-11-23 — Add executable release planning
+
+- Added `plan-project` to turn approved requirements into ordered release tasks, detailed plans for substantial features, and verification coverage.
+- Connected `build-project` to use an owner-provided plan or automatically create one within the same build request, preserving existing plans and confirmed choices; documented both workflows.
+
+---
+
+## 2026-11-23 — Add project implementation skill
+
+- Added `build-project` to implement documented releases in working slices, reuse project engineering and testing standards, select stack-specific checks, and verify completed requirements.
+- Exposed the skill through the repository's agent convention and documented installation and use.
+
+---
+
 ## 2026-11-23 — Publish releases from main pushes
 
 - Changed the release workflow to publish from each push to `main`, including direct pushes and merged pull requests, with tags based on workflow run numbers.
