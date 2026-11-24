@@ -1,6 +1,9 @@
 # Local documentation review drafts
 .docs-review/
 
+# Local model usage history and lock
+/monitoring/
+
 # Python caches and test output
 __pycache__/
 *.py[cod]
