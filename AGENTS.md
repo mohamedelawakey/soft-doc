@@ -14,6 +14,8 @@ Start with [README.md](README.md) for orientation. Use [product.md](docs/product
 
 Record every completed, persisted project change in [CHANGELOG.md](CHANGELOG.md). Use one brief entry per coherent change, newest first, with `---` between entries. Describe the result and relevant IDs; do not log read-only work or claim checks that did not run.
 
+When provider usage metadata is available, record each model call with `python3 scripts/monitor_usage.py record event.json` as specified in [MONITORING.md](MONITORING.md). Use one task ID for a user's request and distinct provider request IDs for its calls. If usage or pricing is unavailable, record it as `Unknown`; do not invent token counts or prices. Keep prompts and secrets out of the event. Agents without access to provider usage cannot capture it automatically.
+
 ## Find the Right Source
 
 | Task concerns | Read |
@@ -21,6 +23,7 @@ Record every completed, persisted project change in [CHANGELOG.md](CHANGELOG.md)
 | Feature behavior, permissions, or edge cases | `docs/requirements.md` |
 | Why a consequential scope or behavior rule changed | `docs/decisions.md` |
 | What changed in the project over time | `CHANGELOG.md` |
+| Usage, metered activity, or costs | `MONITORING.md` |
 | Detailed orientation to the current repository | `docs/project-understanding.md`, when generated; verify time-sensitive claims against source files |
 | File and folder structure | `docs/file-map.md`, when generated; verify the map against the current tree |
 | System boundaries or technical decisions | `docs/architecture.md` |
